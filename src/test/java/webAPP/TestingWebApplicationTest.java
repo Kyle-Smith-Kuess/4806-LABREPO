@@ -24,10 +24,6 @@ public class TestingWebApplicationTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-    private repo book;
-
-
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
         //CommandLineRunner should have put a buddy named MEME
