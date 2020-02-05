@@ -12,6 +12,7 @@ public class BuddyInfoTest {
 	private String name;
 	private String number;
 	private String email;
+	private String address;
 	private EntityManager EM;
 
 	@Before
@@ -21,12 +22,13 @@ public class BuddyInfoTest {
 		name = "Kyle";
 		number = "9058078241";
 		email = "yeetus@deletus.com";
-		buddy1.setAll(name, number, email);
+		address = "yeet house";
+		buddy1.setAll(name, number, email, address);
 	}
 
 	@Test
 	public void testSettingAndGettingAll() {
-		buddy1.setAll(name, number, email);
+		buddy1.setAll(name, number, email, address);
 
 		assertEquals("Name should be Kyle", name, buddy1.getName());
 		assertEquals("Number should be 9058078241", number, buddy1.getNumber());
