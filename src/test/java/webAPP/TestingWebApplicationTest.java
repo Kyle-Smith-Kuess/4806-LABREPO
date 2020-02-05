@@ -36,12 +36,7 @@ public class TestingWebApplicationTest {
     }
     @Test
     public void addressTest() throws Exception {
-        //CommandLineRunner should have put a buddy named MEME
-        AddressBook bb = book.findById(0);
-        BuddyInfo newBud = new BuddyInfo();
-        newBud.setAll("Bonobo","123456789", "123@house.com","123 house");
-        bb.addBuddy(newBud);
-        book.save(bb);
+        //CommandLineRunner should have put a buddy with address 123 house
         this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("123 house")));
     }
