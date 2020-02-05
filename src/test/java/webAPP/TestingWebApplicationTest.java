@@ -30,9 +30,9 @@ public class TestingWebApplicationTest {
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        //CommandLineRunner should have put a buddy named MEME
+        //CommandLineRunner should have put a buddy named Kyle
         this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("MEME")));
+                .andExpect(content().string(containsString("Kyle")));
     }
     @Test
     public void addressTest() throws Exception {
