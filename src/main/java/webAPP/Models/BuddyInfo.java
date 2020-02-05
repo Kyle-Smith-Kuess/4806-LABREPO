@@ -1,4 +1,4 @@
-package App.Models;
+package webAPP.Models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -78,7 +78,7 @@ public class BuddyInfo {
 
 	@Override
 	public String toString() {
-		return "App.Models.BuddyInfo{" +
+		return "webAPP.Models.BuddyInfo{" +
 				"Name='" + Name + '\'' +
 				", Number='" + Number + '\'' +
 				", Email='" + Email + '\'' +

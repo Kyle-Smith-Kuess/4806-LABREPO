@@ -1,14 +1,14 @@
-package App.Models;
-
-import java.util.List;
+package webAPP.Models;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "AddressBook", path = "books")
-public interface repo extends CrudRepository<AddressBook, Long> {
+import java.util.List;
 
-    List<AddressBook> findAll();
+@RepositoryRestResource(collectionResourceRel = "BuddyInfo", path = "buddies")
+public interface buddyRepo extends CrudRepository<BuddyInfo, Long> {
+
     List<AddressBook> findByName(String name);
     AddressBook findById(long id);
+
 }

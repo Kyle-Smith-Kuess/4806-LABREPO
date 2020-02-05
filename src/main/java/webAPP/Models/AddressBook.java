@@ -1,4 +1,4 @@
-package App.Models;
+package webAPP.Models;
 
 import javax.persistence.*;
 import java.util.ArrayList;

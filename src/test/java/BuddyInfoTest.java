@@ -1,6 +1,6 @@
 import static org.junit.Assert.*;
 
-import App.Models.BuddyInfo;
+import webAPP.Models.BuddyInfo;
 import org.junit.Before;
 import org.junit.Test;
 

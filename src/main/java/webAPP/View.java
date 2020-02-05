@@ -1,7 +1,7 @@
-package App;
+package webAPP;
 
-import App.Models.AddressBook;
-import App.Models.BuddyInfo;
+import webAPP.Models.AddressBook;
+import webAPP.Models.BuddyInfo;
 
 import java.awt.*;
 import javax.swing.*;

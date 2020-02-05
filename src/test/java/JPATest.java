@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 
-import App.Models.AddressBook;
-import App.Models.BuddyInfo;
+import webAPP.Models.AddressBook;
+import webAPP.Models.BuddyInfo;
 import org.junit.Test;
 
 import java.util.List;
