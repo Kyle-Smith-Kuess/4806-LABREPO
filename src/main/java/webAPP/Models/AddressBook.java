@@ -68,7 +68,7 @@ public class AddressBook {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BuddyInfo kyle = new BuddyInfo();
-		kyle.setAll("Kyle","123","1@1.com");
+		kyle.setAll("Kyle","123","1@1.com", "11111");
 		BuddyInfo CoolGuy = new BuddyInfo("Cool Guy");
 
 		AddressBook book = new AddressBook();
