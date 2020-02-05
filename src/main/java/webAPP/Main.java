@@ -27,7 +27,7 @@ public class Main {
 		return (args) -> {
 			// save a few customers
 			BuddyInfo kyle = new BuddyInfo();
-			kyle.setAll("Kyle","123","1@1.com");
+			kyle.setAll("Kyle","123","1@1.com", "420 xdHouse");
 			BuddyInfo CoolGuy = new BuddyInfo("Cool Guy");
 
 			AddressBook a1 = new AddressBook();
@@ -39,7 +39,7 @@ public class Main {
 
 
 			BuddyInfo MEMER = new BuddyInfo();
-			kyle. setAll("MEME","123","1@1.com");
+			MEMER.setAll("MEME","123","1@1.com","111 OMGHOUSE");
 			BuddyInfo CoolBwoy = new BuddyInfo("Cool Bwoy");
 
 			AddressBook a2 = new AddressBook();

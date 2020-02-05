@@ -14,6 +14,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import webAPP.Models.AddressBook;
+import webAPP.Models.BuddyInfo;
 import webAPP.Models.repo;
 
 @RunWith(SpringRunner.class)
@@ -23,12 +25,24 @@ public class TestingWebApplicationTest {
 
     @Autowired
     private MockMvc mockMvc;
+    @Autowired
+    private repo book;
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
         //CommandLineRunner should have put a buddy named MEME
         this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("MEME")));
+    }
+    @Test
+    public void addressTest() throws Exception {
+        //CommandLineRunner should have put a buddy named MEME
+        AddressBook bb = book.findById(0);
+        BuddyInfo newBud = new BuddyInfo();
+        newBud.setAll("Bonobo","123456789", "123@house.com","123 house");
+        bb.addBuddy(newBud);
+        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().string(containsString("123 house")));
     }
 /*
     @Test

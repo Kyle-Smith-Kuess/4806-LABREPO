@@ -15,6 +15,16 @@ public class BuddyInfo {
 	String Number;
 	String Email;
 
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    String Address;
+
 	public BuddyInfo(String name)
 	{
 		Name = name;
@@ -25,16 +35,17 @@ public class BuddyInfo {
 		BuddyInfo Fareed = new BuddyInfo("Fareed");
 		
 	
-		Fareed.setAll("Fareed", "911", "Fareed@Fareed.com");//Call in case of emergency	
+		Fareed.setAll("Fareed", "911", "Fareed@Fareed.com", "123 House");//Call in case of emergency
 		
 		System.out.println(String.format("Hello %s, Can you still be contacted at:\nEmail:%s\nNumber:%s",Fareed.getName(),Fareed.getEmail(),Fareed.getNumber() ));
 	}
 
-	public void setAll(String name, String number, String email)
+	public void setAll(String name, String number, String email, String address)
 	{
 		setName(name);
 		setNumber(number);
 		setEmail(email);
+		setAddress(address);
 	}
 	@Id
 	@GeneratedValue
@@ -82,6 +93,7 @@ public class BuddyInfo {
 				"Name='" + Name + '\'' +
 				", Number='" + Number + '\'' +
 				", Email='" + Email + '\'' +
+                ", Address='" + Address + '\'' +
 				'}';
 	}
 }
